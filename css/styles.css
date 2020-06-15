@@ -1,2 +1,96 @@
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: Tahoma, sans-serif;
+}
+nav{
+    background: #0082e6;
+    width: 100%;
+    height: 80px;
+}
+.logo{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 80px;
+    padding: 0 30px 0 100px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav a{
+    color: white;
+    font-size: 1.4rem;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+a.active, a:hover{
+    background: #1b9bff;
+    transition: .3s;
+}
+.checkbtn{
+    color: white;
+    font-size: 2rem;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:980px){
+    .logo{
+        font-size: 2rem;
+        padding-left: 50px;
+    }
+    nav a{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width:880px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        background: #2c3e50;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    a.active, a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
